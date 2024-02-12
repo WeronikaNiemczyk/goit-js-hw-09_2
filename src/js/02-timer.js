@@ -49,6 +49,8 @@ const fp = flatpickr(flatpickrInput, {
       startBtn.disabled = false;
 
       const startBtnClick = () => {
+        startBtn.disabled = true;
+        flatpickrInput.disabled = true;
         const addLeadingZero = value => value.toString().padStart(2, '0');
 
         let timerId = setInterval(() => {

@@ -7,6 +7,7 @@ const form = document.querySelector('.form');
 
 const createPromise = (position, delay) => {
   const shouldResolve = Math.random() > 0.3;
+
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (shouldResolve) {
@@ -34,6 +35,6 @@ const onSubmit = event => {
 
     delayValue += stepValue;
   }
+  form.reset();
 };
-
 form.addEventListener('submit', onSubmit);
